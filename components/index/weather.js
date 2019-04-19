@@ -1,8 +1,9 @@
 import React from 'react'
 import { KeyboardAvoidingView, Text, TextInput, View, ImageBackground, Dimensions,  TouchableWithoutFeedback, Keyboard } from 'react-native'
-import backgroundImage from '../assets/images/47.jpg'
-import FaSearch from "react-icons/fa"
+import backgroundImage from '../../assets/images/47.jpg'
+import Icon from 'react-native-vector-icons/Ionicons'
 import styles from './styles'
+import App from './index'
 
 const DismissKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -10,8 +11,7 @@ const DismissKeyboard = ({ children }) => (
   </TouchableWithoutFeedback>
 )
 
-export default class Weather extends React.Component{
-  render(){
+const Weather = ({ weather, temperature }) => {
     return (
         <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
           <DismissKeyboard>
@@ -21,15 +21,17 @@ export default class Weather extends React.Component{
                 <Text style={styles.smallText}>Light Cloud</Text>
                 <Text style={styles.largeText}>27°</Text>
                 <TextInput style={styles.input}
-                //<FaSearch/>
-                placeholder = "Search any city"
-                underColorAndroid = "transparent"
-                autoCapitalize = "none"
-                placeholderTextColor = 'white'/>
+                  placeholder = "       Search any city..."
+                  underColorAndroid = "transparent"
+                  autoCapitalize = "none"
+                  placeholderTextColor = 'white'
+                  />
+                <Icon style={styles.inputIcon} name={"ios-globe"} size={28} color={'white'} />
               </View>
             </ImageBackground>
           </DismissKeyboard>
         </KeyboardAvoidingView>
     );
-  }
-}
+  };
+
+export default Weather

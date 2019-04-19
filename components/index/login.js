@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {KeyboardAvoidingView, Text, TextInput, View, ImageBackground, TouchableOpacity, TouchableWithoutFeedback, Keyboard} from 'react-native'
-import backgroundImage from '../assets/images/47.jpg'
+import backgroundImage from '../../assets/images/47.jpg'
 import styles from './styles'
 
 const DismissKeyboard = ({ children }) => (

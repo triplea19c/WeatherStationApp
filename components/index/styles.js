@@ -4,7 +4,8 @@ const {HEIGHT, WIDTH} = Dimensions.get('window')
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#fff'
   },
   containerBackground: {
     width: null,
@@ -44,6 +45,11 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center'
   },
+  inputIcon: {
+    position: 'relative',
+    bottom: 40,
+    left: 15
+  }
 })
 
 export default styles

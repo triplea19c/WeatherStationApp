@@ -1,15 +1,7 @@
 import React from 'react'
-import Weather from './components/weather'
-import Login from './components/login'
+import Weather from './components/index/weather'
+import Login from './components/index/login'
 import { createStackNavigator, createAppContainer } from 'react-navigation'
-
-class App extends React.Component {
-  render(){
-    return(
-      <Login/>
-    );
-  }
-}
 
 const Navigation = createStackNavigator({
     Default: Login,
